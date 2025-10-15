@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Work07 トップページ</title>
+</head>
+
+<body>
+    <h1>Work07 トップページ</h1>
+
+    <ul>
+        <li><a href="{% url 'omikuji' %}">おみくじを引く</a></li>
+        <li><a href="{% url 'janken' %}">じゃんけんゲーム</a></li>
+        <li><a href="{% url 'hilow' %}">Hi & Low ゲーム</a></li>
+    </ul>
+</body>
+
+</html>

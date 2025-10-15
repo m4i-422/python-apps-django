@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<title>メモ一覧</title>
+</head>
+<body>
+<h1>メモ一覧</h1>
+<a href="{% url 'work08:new' %}">新規作成</a>
+<ul>
+    {% for memo in memos %}
+    <li>
+        <a href="{% url 'work08:edit' memo.id %}">{{ memo.title }}</a>
+    </li>
+    {% empty %}
+    <li>メモはまだありません。</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

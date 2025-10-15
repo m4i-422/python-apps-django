@@ -1,0 +1,18 @@
+{% extends "work06/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>令和 → 西暦 変換ツール</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">変換する</button>
+</form>
+
+{% if result %}
+<p>結果: 西暦 <strong>{{ result }}</strong> 年です。</p>
+{% endif %}
+
+<p><a href="{% url 'index' %}">← トップに戻る</a></p>
+{% endblock %}

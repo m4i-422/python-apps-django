@@ -1,0 +1,14 @@
+{% extends "work06/base.html" %}
+{% load static %}
+
+{% block content %}
+<h1>ようこそ！Work06 サンプルアプリへ</h1>
+
+<ul>
+    <li><a href="{% url 'reiwa' %}">令和から西暦に変換してくれるくん</a></li>
+    <li><a href="{% url 'bmi' %}">BMIを計算してくれるくん</a></li>
+    <li><a href="{% url 'warikan' %}">割り勘の金額を計算してくれるくん</a></li>
+    <li><a href="{% url 'chokin' %}">貯金シミュレーションしてくれるくん</a></li>
+    <li><a href="{% url 'calculator' %}">四則演算計算機くん</a></li>
+</ul>
+{% endblock %}

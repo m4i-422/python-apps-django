@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work06</title>
+</head>
+
+<body>
+  <header>
+    <h1>Work06 サンプルアプリ</h1>
+    <nav>
+      <a href="{% url 'index' %}">トップ</a> |
+      <a href="{% url 'reiwa' %}">令和から西暦に変換してくれるくん</a> |
+      <a href="{% url 'bmi' %}">BMIを計算してくれるくん</a> |
+      <a href="{% url 'warikan' %}">割り勘の金額を計算してくれるくん</a> |
+      <a href="{% url 'chokin' %}">貯金シミュレーションしてくれるくん</a> |
+      <a href="{% url 'calculator' %}">四則演算計算機くん</a>
+    </nav>
+    <hr>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+  <hr>
+  <footer>
+    <small>© 2025 Work06</small>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #fafafa;
+}
+
+
+/* Navigation */
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    padding: 16px 0;
+    width: 100%;
+}
+
+header nav ul a:hover {
+    color: #026A79;
+    text-decoration: underline;
+}
+
+
+/* Top */
+
+.top {
+    position: relative;
+}
+
+.top h1 {
+    position: absolute;
+    color: #fff;
+    font-family: 'Allison', cursive;
+    font-size: 125px;
+    font-weight: bold;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    margin: 300px 0 0 0;
+}
+
+.top img {
+    width: 100%;
+    height: 765px;
+    object-fit: cover;
+}
+
+
+/* AboutArea */
+#AboutArea {
+    flex-basis: 100%;
+}
+
+div.aboutWrapper {
+    display: flex;
+}
+
+#AboutArea h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 70px 0 0 0;
+}
+
+#AboutArea h2 {
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 0 0 0;
+}
+
+.name {
+    font-weight: bold;
+    letter-spacing: 7px;
+    padding: 6px 15px 0 0;
+}
+
+.student {
+    font-size: 20px;
+    padding: 6px 0 0 25px;
+    margin-right: 0;
+    letter-spacing: 3px;
+}
+
+#AboutArea h3 {
+    font-size: 25px;
+    padding: 6px 0 0;
+    margin-right: 0;
+}
+
+#AboutArea h4 {
+    font-size: 15px;
+    padding: 6px 0 0 0;
+    letter-spacing: 4px;
+}
+
+/* PC表示の画像 */
+#AboutArea img {
+    margin: 100px 0 0 60px;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 3px solid #026A79;
+    object-fit: cover;
+    padding: 4px;
+    flex-basis: 735px;
+}
+
+/* PC表示のプロフィール */
+#AboutArea .profile {
+    display: flex;
+    flex-direction: column;        
+    justify-content: flex-start;   
+    text-align: left;
+    padding: 150px 60px 0 60px;
+}
+
+#AboutArea .profile p {
+    line-height: 2.5;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+}
+
+
+/* WorksArea */
+#WorksArea h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 170px 0 0 0;
+}
+
+#WorksArea h2 {
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 0 0 0;
+}
+
+/* card layout muri */
+#WorksArea nav img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 50px 0 100px 0;
+    padding: 100px 50px;
+}
+
+
+/* GoalArea */
+
+#GoalArea h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 70px 0 0 0;
+}
+
+#GoalArea h2 {
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 0 0 0;
+}
+
+#GoalArea h3 {
+    text-align: center;
+    font-size: 50px;
+    padding: 100px 0 20px 0;
+    font-weight: bold;
+    border-bottom: 5px solid #026A79;
+    width: 700px;
+    margin: 0 auto;
+}
+
+#GoalArea p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 3;
+    letter-spacing: 4px;
+    padding: 60px 100px 200px 100px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #026A79;
+    height: 100px;
+    text-align: center;
+    color: #fff;
+    padding: 40px 0 0 0;
+    font-size: 14px;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+    .top h1 {
+        font-size: 60px;
+        margin: 150px 0 0 0;
+    }
+
+    .top img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .aboutWrapper {
+        flex-direction: column;  
+        align-items: center;    
+        justify-content: center;
+    }
+    
+    #AboutArea img {  
+        display: block;
+        margin: 15px auto 0;
+        width: 80%;
+        width: 300px;
+        height: 300px;
+    }
+
+    #AboutArea .profile {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #AboutArea .profile p {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-top: 15px;
+    }
+
+    #WorksArea nav img {
+        padding: 100px 20px;
+    }
+
+    #GoalArea h3 {
+        font-size: 30px;
+        width: 90%;
+        padding: 50px 0 0 0;
+    }
+    #GoalArea p {
+        font-size: 11px;
+        line-height: 4;
+        letter-spacing: 2px;
+        padding: 30px 20px 100px 20px;
+    }
+}
+
+.separator {
+        display: none;
+    }
+
+.student {
+        text-align: center;
+    }

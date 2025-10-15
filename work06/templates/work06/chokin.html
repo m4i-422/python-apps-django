@@ -1,0 +1,30 @@
+{% extends "work06/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>貯金シミュレーション</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">計算する</button>
+</form>
+
+{% if result %}
+<h3>貯金履歴</h3>
+<table border="1" cellpadding="5">
+    <tr>
+        <th>年</th>
+        <th>総額</th>
+    </tr>
+    {% for year, total in result %}
+    <tr>
+        <td>{{ year }}</td>
+        <td>{{ total }} 円</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+<p><a href="{% url 'index' %}">← トップに戻る</a></p>
+{% endblock %}

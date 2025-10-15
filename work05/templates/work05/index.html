@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% static 'work05/css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'work05/css/style.css' %}">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+  <title>プロフィールページ</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#AboutArea">About</a></li>
+        <li><a href="#WorksArea">Works</a></li>
+        <li><a href="#GoalArea">Goal</a></li>
+      </ul>
+    </nav>
+    <div class="top">
+      <h1>
+        Welcome to {{ name }} Page !
+      </h1>
+      <p><img src="{% static 'work05/images/image_bokashi.jpg' %}" alt="背景"></p>
+    </div>
+  </header>
+
+  <main>
+    <section id="AboutArea">
+      <h1>About</h1>
+      <h2>私について</h2>
+      <div class="aboutWrapper">
+        <p class="img"><img src="{% static 'work05/images/kurage.jpg' %}" alt="profile"></p>
+        <div class="profile">
+          <h4>{{ name }}</h4>
+          <h3>
+            <span class="name">{{ name_en }}</span>
+            <span class="separator">｜</span>
+            <span class="student">Student</span>
+          </h3>
+          <p>{{ birth_year }}年、福岡県北九州市生まれ。<br>
+            音楽を聴くことが好きです。<br><br>
+            2025年4月にKADOKAWAドワンゴ情報工科学院に入学。<br>
+            「サマーセールバナー」をテーマにWebバナーの制作に取り組む。<br>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="WorksArea">
+      <h1>Works</h1>
+      <h2>制作実績</h2>
+      <nav><img src="{% static 'work05/images/works.png' %}" alt="Works"></nav>
+    </section>
+
+    <section id="GoalArea">
+      <h1>Goal</h1>
+      <h2>今年の目標</h2>
+      <h3>大きな制作実績を作ること</h3>
+      <p>
+        具体的な作品の構想などはまだありませんが、<br>
+        今回制作した自分のプロフィールページ以外で、<br>
+        HPなどの制作を年内で進めていきたいと考えています。<br>
+        ひとつ作品を作るだけで、自信がついたり、<br>
+        今できることを可視化できたり、<br>
+        さまざまな面で自分の成長に繋げることができます。<br>
+        今以上に良い作品が作れるように、<br>
+        色んなページを見て、その仕組みやバランスを<br>
+        自分も活用できるようにしていきたいです。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>©{{ name_en }}</small></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "work06/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>割り勘計算フォーム</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">計算する</button>
+</form>
+
+{% if result %}
+<p>一人あたり: {{ result }} 円</p>
+{% endif %}
+
+<p><a href="{% url 'index' %}">← トップに戻る</a></p>
+{% endblock %}

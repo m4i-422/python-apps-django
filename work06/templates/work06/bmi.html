@@ -1,0 +1,18 @@
+{% extends "work06/base.html" %}
+{% load static %}
+
+{% block content %}
+<h2>BMI計算フォーム</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">計算する</button>
+</form>
+
+{% if result %}
+<p>あなたのBMIは <strong>{{ result }}</strong> です！</p>
+{% endif %}
+
+<p><a href="{% url 'index' %}">← トップに戻る</a></p>
+{% endblock %}

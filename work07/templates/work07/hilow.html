@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>Hi & Low ゲーム</title>
+</head>
+
+<body>
+    <h1>Hi & Low ゲーム</h1>
+
+    {% if previous_number %}
+    <p>現在の数字: <strong>{{ previous_number }}</strong></p>
+    {% endif %}
+
+    {% if next_number %}
+    <p>次の数字は… <strong>{{ next_number }}</strong></p>
+    <p>結果: <strong>{{ result }}</strong></p>
+    {% endif %}
+
+    <form method="GET">
+        <button type="submit" name="choice" value="high">High</button>
+        <button type="submit" name="choice" value="low">Low</button>
+    </form>
+
+    <p><a href="{% url 'work07_index' %}">← トップに戻る</a></p>
+</body>
+
+</html>

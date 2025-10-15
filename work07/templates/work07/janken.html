@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <title>じゃんけんゲーム</title>
+</head>
+
+<body>
+    <h1>じゃんけんゲーム</h1>
+
+    {% if cpu_choice %}
+    <p>CPU の手: <strong>{{ cpu_choice }}</strong></p>
+    <p>あなたの結果: <strong>{{ result }}</strong></p>
+    {% endif %}
+
+    <form method="GET">
+        <button type="submit" name="player" value="グー">グー</button>
+        <button type="submit" name="player" value="チョキ">チョキ</button>
+        <button type="submit" name="player" value="パー">パー</button>
+    </form>
+
+    <p><a href="{% url 'work07_index' %}">← トップに戻る</a></p>
+</body>
+
+</html>
