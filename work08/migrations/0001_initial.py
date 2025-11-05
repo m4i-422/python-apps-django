@@ -14,8 +14,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Memo',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(default='no title', max_length=100)),
+                ('id', models.BigAutoField(auto_created=True,
+                                           primary_key=True,
+                                           serialize=False,
+                                           verbose_name='ID')),
+                ('title', models.CharField(default='no title',
+                                           max_length=100)),
                 ('content', models.TextField(blank=True)),
             ],
         ),

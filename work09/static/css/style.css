@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.app-header {
+    background-color: rgb(116, 149, 116);
+    color: white;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.completed td {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.overdue td {
+    color: red;
+    font-weight: bold;
+}
+
+.btn {
+    background-color: rgb(99, 149, 99);
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-right: 5px;
+    border-radius: 3px;
+}

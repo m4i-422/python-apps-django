@@ -25,4 +25,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/work06/')),
     path('work07/', include('work07.urls')),
     path('work08/', include('work08.urls')),
+    path('work09/', include('work09.urls')),
 ]
