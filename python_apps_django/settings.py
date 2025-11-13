@@ -13,7 +13,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+from decouple import config
 load_dotenv()
+
+OPENAI_API_KEY = config('OPENAI_API_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,7 +51,8 @@ INSTALLED_APPS = [
     "work06",
     "work07",
     "work08",
-    "work09"
+    "work09",
+    "gohansan",
 ]
 
 MIDDLEWARE = [
@@ -95,11 +99,14 @@ DATABASE_PORT = os.environ.get("DB_PORT") or "3306"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": DATABASE_NAME,
-        "USER": DATABASE_USER,
-        "PASSWORD": DATABASE_PASSWORD,
-        "HOST": DATABASE_HOST,
-        "PORT": DATABASE_PORT,
+        "NAME": "gohansan_db",
+        "USER": "root",
+        "PASSWORD": "Kmai.1225",
+        "HOST": "localhost",
+        "PORT": "3306",
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
